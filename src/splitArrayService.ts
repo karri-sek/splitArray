@@ -5,7 +5,7 @@ const chunkInputArray = (inputArray:(string | number | boolean)[], chunkSize: nu
   const inputArrayLength = inputArray.length;
   let startChunkIndex = 1;
   if(chunkSize <=0) return inputArray;
-  const filteredArray = inputArray.filter(i=>i !='');
+  const filteredArray = inputArray.filter(i=>i !=='');
   if(chunkSize  >= inputArrayLength) return filteredArray;
   filteredArray.forEach((element, index)=> {
       if(index<(chunkSize * startChunkIndex)){
