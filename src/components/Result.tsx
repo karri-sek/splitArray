@@ -11,7 +11,7 @@ const Result = (resultArray: any) => {
                 for(var i = 0; i < length; i++) {
                     var cube = resultArray.result[i];
                     if(Array.isArray(cube)){
-                        displayResult += '['+`${cube}` +']' + "    ";
+                        displayResult += '['+`${cube}` +']';
                     }
                    }
             }
