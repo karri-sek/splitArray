@@ -1,12 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Header from './Header';
 
 test('renders Header component', () => {
-  render(<App />);
+  render(<Header />);
   const headerElement = screen.getByText(/Split Array/i);
   expect(headerElement).toBeInTheDocument();
-  const paragraphElement = screen.getByText(/This is simple Algorithm of splitting given array into N number of chunks/i);
-  expect(paragraphElement).toBeInTheDocument();
-
 });
