@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+# hosted and demo available at 
+## https://goofy-meninsky-4a2714.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
