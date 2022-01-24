@@ -4,6 +4,6 @@ import Header from './Header';
 
 test('renders Header component', () => {
   render(<Header />);
-  const headerElement = screen.getByText(/Split Array/i);
+  const headerElement = screen.getByText(/vestiaire/i);
   expect(headerElement).toBeInTheDocument();
 });

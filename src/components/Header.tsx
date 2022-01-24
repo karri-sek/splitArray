@@ -3,9 +3,9 @@ import React from 'react'
 const Header = () => {
     return(
         <>
-        <h1>Split Array</h1>
+        <h1>vestiaire back end test: payout limit 8000</h1>
         <p>
-            This is simple Algorithm of splitting given array into N number of chunks
+           schemas
         </p>
         </>
         

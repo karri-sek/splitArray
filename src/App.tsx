@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form'
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Header from './components/Header'
@@ -10,6 +9,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import chunkInputArray from './splitArrayService';
 import Result from './components/Result';
+import Items from './components/Items';
+import Sellers from './components/Sellers';
+import SoldItems from './components/SoldItems';
+
+import Payouts from './components/Payouts';
+
 
 function App() {
 
@@ -43,17 +48,10 @@ function App() {
               <Header/>
               <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
-                  <Form.Group as={Col} htmlFor="formInputArrayElements">
-                      <FloatingLabel label="please enter comma separated array elements">
-                        <Form.Control as="textarea" style={{ height: '80px' }} onBlur={handleInputArrayElements}/>
-                      </FloatingLabel>
-                  </Form.Group>
-                  <Form.Group as={Col} htmlFor="chunkSize">
-                     <Form.Label htmlFor="chunkSize">Chunk size</Form.Label>
-                      <Form.Control type="text"  id="chunkSize" aria-describedby="chunkSizeHelpBlock" className='chunkSize' onChange={handleChunkSize}/>
-                      <Form.Text id="chunkSizeHelpBlock" muted> Your Chunk size should be an Integer, and it should be greater then 0. </Form.Text>
-                       {chunkSizeError && <p className="error">{chunkSizeError}</p>}
-                  </Form.Group>
+                  <Items/>
+                  <Sellers/>
+                  <SoldItems/>
+                  <Payouts/>
                 </Row>
                 <Button variant="primary"  onClick={handleSubmit} disabled={!!chunkSizeError}>
                   Submit
